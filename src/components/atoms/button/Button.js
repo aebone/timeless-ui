@@ -2,8 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Button.scss";
 
-const Button = ({ text, size, type }) => {
-  return <button className={`button ${size} ${type}`}>{text}</button>;
+const Button = ({ text, size, style }) => {
+  return (
+    <button className={`button button-${size} button-${style}`}>{text}</button>
+  );
 };
 
 export default Button;
@@ -11,11 +13,11 @@ export default Button;
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   size: PropTypes.string,
-  type: PropTypes.string,
+  style: PropTypes.string,
 };
 
 Button.defaultProps = {
   text: "Cool Button",
   size: "medium",
-  type: "default",
+  style: "basic",
 };

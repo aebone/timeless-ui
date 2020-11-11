@@ -1,6 +1,6 @@
-@import "src/components/variables";
+@import "../../variables";
 
-.button, .button-medium, .button-default {
+.button, .button-medium, .button-basic {
   font-size: 1rem;
   background-color: $color-default;
   color: black;
@@ -9,25 +9,25 @@
   padding: 6px 12px;
   font-family: $font-comic-sans;
 
-  &.small {
+  &.button-small {
     font-size: 0.6rem;
   }
 
-  &.large {
+  &.button-large {
     font-size: 1.4rem;
   }
 
-  &.primary {
+  &.button-primary {
     background-color: $color-primary;
     color: white;
   }
 
-  &.success {
+  &.button-success {
     background-color: $color-success;
     color: black;
   }
 
-  &.danger {
+  &.button-danger {
     background-color: $color-danger;
     color: white;
   }

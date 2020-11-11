@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./buttons/Button";
+import Button from "./atoms/button/Button";
 import "./App.scss";
 
 function App() {
@@ -8,15 +8,15 @@ function App() {
       <h1>Buttons</h1>
 
       <h2>Size</h2>
-      <Button text={"Small Button"} size={"small"} />
-      <Button text={"Medium Button"} />
-      <Button text={"Large Button"} size={"large"} />
+      <Button text={"Small Button"} size={"small"} style={"basic"} />
+      <Button text={"Medium Button"} size={"medium"} style={"basic"} />
+      <Button text={"Large Button"} size={"large"} style={"basic"} />
 
       <h2>Color</h2>
-      <Button text={"Default Button"} />
-      <Button text={"Primary Button"} type={"primary"} />
-      <Button text={"Success Button"} type={"success"} />
-      <Button text={"Danger Button"} type={"danger"} />
+      <Button text={"Basic Button"} size={"medium"} style={"basic"} />
+      <Button text={"Primary Button"} size={"medium"} style={"primary"} />
+      <Button text={"Success Button"} size={"medium"} style={"success"} />
+      <Button text={"Danger Button"} size={"medium"} style={"danger"} />
     </div>
   );
 }
