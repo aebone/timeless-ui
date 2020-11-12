@@ -1,10 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Button.scss";
+import { StyledButton, StyledLinkButton } from "./Button.styles";
 
-const Button = ({ text, size, style }) => {
+const Button = ({ text, variant, href, onClick }) => {
+  if (href) {
+    return <StyledLinkButton href={href}>{text}</StyledLinkButton>;
+  }
   return (
-    <button className={`button button-${size} button-${style}`}>{text}</button>
+    <StyledButton variant={variant} onClick={onClick}>
+      {text}
+    </StyledButton>
   );
 };
 
@@ -14,10 +19,12 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   size: PropTypes.string,
   style: PropTypes.string,
+  onClick: PropTypes.func,
+  href: PropTypes.string,
+  variant: PropTypes.string,
 };
 
 Button.defaultProps = {
   text: "Cool Button",
-  size: "medium",
-  style: "basic",
+  variant: "default",
 };
